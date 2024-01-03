@@ -7,10 +7,8 @@ useMenu()
 
 <template>
   <!-- unocss示例 -->
-  <div class="text-[#f00] text-[length:20px]">
-    这是首页哦
-    <!-- 图标使用示例 -->
-    <i-ep-home-filled />
+  <div>
+    <micro-app name="test" url="http://localhost:6001" iframe></micro-app>
   </div>
 </template>
 
