@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@micro-zoe/micro-app": "^1.0.0-rc.3",
     "@vueuse/core": "^10.7.1",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
