@@ -11,6 +11,10 @@ import Layouts from 'vite-plugin-vue-layouts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+    port: 6002
+  },
   plugins: [
     vue(),
     AutoImport({
@@ -74,6 +78,10 @@ export default defineConfig({
           ]
         })
       ],
+      dirs: [
+        './src/components',
+      ],
+      directoryAsNamespace: true,
       dts: './components.d.ts'
     }),
     Icons({
