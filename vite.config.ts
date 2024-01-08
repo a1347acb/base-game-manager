@@ -8,6 +8,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Unocss from 'unocss/vite'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -76,6 +77,9 @@ export default defineConfig({
           enabledCollections: [
             'ep'
           ]
+        }),
+        AntDesignVueResolver({
+          importStyle: false
         })
       ],
       dirs: [
@@ -92,11 +96,13 @@ export default defineConfig({
     Pages({
       dirs: [
         { dir: 'src/pages', baseRoute: '' }
-      ]
+      ],
+      exclude: ['*/components/**']
     }),
     Layouts({
       layoutsDirs: 'src/layouts',
-      defaultLayout: 'main'
+      defaultLayout: 'main',
+      exclude: ['*/components/**']
     })
   ],
   resolve: {
